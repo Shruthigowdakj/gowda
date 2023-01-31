@@ -1,0 +1,19 @@
+{
+    "Name": "Virtual Machines",
+    "Id": null,
+    "IsCustom": true,
+    "Description": "allow the size of a virtul machine",
+    "Actions": [
+      "Microsoft.Compute/virtualMachines/*",
+      "Microsoft.Storage/storageAccounts/*",
+      "Microsoft.Network/networkInterfaces/*",
+      "Microsoft.Network/publicIPAddresses/*",
+      "Microsoft.Network/virtualNetworks/*",
+      "Microsoft.Network/networkSecurityGroups/*",
+      "Microsoft.Resources/deployments/*"
+    ],
+    "NotActions": [
+  
+    ]
+  }
+
