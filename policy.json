@@ -2,8 +2,7 @@
     "if": {
        "anyOf": [
                 
-            {	
-               
+      {	               
        "not": {
          "anyOf": [
                      {
@@ -33,20 +32,21 @@
                     {
              "field": "type",
              "like": "Microsoft.Storage/storageAccounts/*"
-             }
+             },
+             {
+                "field": "type",
+                "in": ["Microsoft.Compute/disks", "Microsoft.Compute/virtualMachines", "Microsoft.Network/networkInterfaces", "Microsoft.Network/networkSecurityGroups", "Microsoft.Network/publicIPAddresses", "Microsoft.Storage/storageAccounts", "Microsoft.Network/virtualNetworks", "Microsoft.Network/publicIPAddresses"]
+                } 
 		 
           ]
        }
-      }
-     ]  
-   },
-	
+      },
   {
             "allof": [
                            {
 				"source": "action",
 				"equals":  "Microsoft.Compute/virtualMachines/sku"
-			   },    
+			   },
                            {
                                  "field": "type",
                                   "equals": "Microsoft.Compute/virtualMachines/"
@@ -58,8 +58,13 @@
 				  }
 	          }
                      ]	
-   },		
+   }
+]
+    },
+   		
    "then": {
      "effect": "deny"
-   }
+   } 
 }
+
+
