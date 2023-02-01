@@ -43,10 +43,7 @@
       },
   {
             "allof": [
-                           {
-				"source": "action",
-				"equals":  "Microsoft.Compute/virtualMachines/sku"
-			   },
+                          
                            {
                                  "field": "type",
                                   "equals": "Microsoft.Compute/virtualMachines"
