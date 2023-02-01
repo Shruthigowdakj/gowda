@@ -34,7 +34,8 @@
              "field": "type",
              "like": "Microsoft.Storage/storageAccounts/*"
              }
-                 ]
+		 
+          ]
        }
       }
      ]
@@ -61,3 +62,4 @@
      "effect": "deny"
    }
   }
+}
