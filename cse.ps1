@@ -8,7 +8,7 @@ $VSCodeInstaller = "$env:TEMP\vscode-installer.exe"
 Invoke-WebRequest -Uri $VSCodeDownloadUrl -OutFile $VSCodeInstaller
 
 # Install Visual Studio Code
-Start-Process -FilePath $VSCodeInstaller -ArgumentList "/silent" -Wait
+Start-Process -FilePath $VSCodeInstaller -Wait
 
 # Clean up the installation file
 Remove-Item $VSCodeInstaller
